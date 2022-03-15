@@ -1,0 +1,12 @@
+html {
+  display: block;
+  box-sizing: border-box;
+}
+.cart {
+  color: white;
+  padding: 20px;
+  &__item {
+    overflow: hidden;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,84 @@
+html {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
+}
+body {
+  background-color: black;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
+}
+.form__login {
+  color: white;
+  padding: 10px;
+  width: 30%;
+
+  margin-top: 50px;
+  margin-left: 35%;
+
+  .logo {
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 40px;
+  }
+  .form__input {
+    padding: 20px;
+    position: relative;
+    $color: rgba(110, 110, 110, 0.452);
+    &:after {
+      content: "";
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -999;
+      opacity: 0.8;
+      backdrop-filter: blur(15px);
+      background-color: $color;
+    }
+    input {
+      background-color: black;
+      border: 1px solid $color;
+      color: white;
+    }
+
+    .passwordField {
+      position: relative;
+
+      .icon {
+        cursor: pointer;
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        top: 0;
+        right: 10px;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+          background-color: white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .form__login {
+    padding: 0;
+    .logo {
+      padding: 0 40px;
+    }
+  }
+}
