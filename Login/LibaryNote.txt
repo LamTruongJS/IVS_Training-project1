@@ -1,0 +1,118 @@
+cài đặt thư viện react: 
+	npx create-react-app myapp
+
+cài đặt thư viện classnames:
+	npm i classnames
+	import classNames from 'classnames'
+	sử dụng : className={classNames(.....)}
+
+cài đặt thư viện lodash:
+	npm i -g npm
+	npm i --save lodash
+
+cài đặt thư viện queryString: nối chuỗi dạng a&b
+	npm i --save query-string
+	import queryString from 'query-string'
+	Cách dùng a = queryString.parse(nội dung cần merge) => chuyển thành 1 Object ví dụ name=Trường => {name: 'Trường'}
+	cách dùng b = queryString.stringify(nội dung) => chuyển thành dạng name=truong&class=1 từ 1 object{name:"trường, class:"12C2"}
+
+cài đặt thư JSON server đối với js
+	cài đặt nodejs
+	npm init
+	npm i json-server
+	tạo 1 db.json (hoặc tên khác)
+	mở package.json --> script -> thêm "start": "json-server --watch db.json",
+
+đổi PORT : mở package.json --> script --> "start": thêm set PORT="cổng port"
+
+/// lệnh gõ nhanh rce: tạo class reactjs
+		  rsfp: tạo func reactjs
+		ctrl +shift + mũi tên xuống : coppy từ dòng trên xuống
+		alt+shift+o: tự động xóa import các thư viện ko dùng
+
+Cài đặt thư viện react router:
+	npm i react-router-dom@5
+
+Cài đặt sass để react hỗ trợ: 
+	 npm i node-sass
+
+Cài đặt prettier để formatcode
+	vào prettier.io để coppy json
+	vào src tạo .prettierrc
+	past phần json vừa coppy vào
+
+Cài đặt Axios
+	npm i axios
+	import axios from 'axios'
+
+Cài đặt casual để hỗ trợ random
+	npm i casual
+	import casual from 'casual'
+	ví dụ : casual.uuid,casual.title
+
+Cài đặt redux
+	npm install react-redux
+
+Cài đặt redux toolkit
+	npm install @reduxjs/toolkit
+	npm install --save redux react-redux
+	const { createSlice } = require('@reduxjs/toolkit');
+	const { configureStore } = require('@reduxjs/toolkit');
+	// tạo ra các async actions thông qua createAsyncThunk
+	import {createAsyncThunk} from '@reduxjs/toolkit';
+
+Dùng Redux devtool hỗ trợ debug
+
+Khi gặp 1 state được tính toán từ các state khác thì ta dùng createSelector
+	import {createSelector} from '@reduxjs/toolkit'
+	const State_one = (state)=>state.cart
+	export const State_2 =createSelector(State_one, ()=>{//tính toán})
+	//sử dụng
+	const cartCount = useSelector(State_2);
+
+Dùng jsconfig.json để hỗ trợ ../../../
+{
+    "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl":"src",
+  },
+   "include": ["src/**/*"]
+}
+
+Cài đặt Material UI
+	npm install @mui/material @emotion/react @emotion/styled
+	npm install @mui/material @mui/styled-engine-sc styled-components
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+	npm install @mui/icons-material
+	npm install @mui/styles
+	npm install @mui/lab
+	npm install @material-ui/core
+	
+
+
+Cài đặt full bộ thư viện React-hook-form
+	npm install react-hook-form
+	npm install @hookform/resolvers yup
+	https://github.com/jquense/yup : XEM VỀ QUẢN LÍ LỖI
+
+Cài đặt Notistack: là 1 kiểu thông báo bắn ra từ 1 góc màn hình
+	npm install notistack
+	import { SnackbarProvider } from 'notistack';
+	<SnackbarProvider anchorOrigin={{vertical: 'top', horizontal: 'right'}}>
+    		<App />
+	</SnackbarProvider>
+
+Đọc API thông qua https://strapi.io/
+
+Cách cập nhật packages lên bảng mới nhất
+	Vào file package.json sau đó chạy npm i ten_pakage@latest
+
+Cài đặt thư viện DOMPurify để render dữ liệu html an toàn từ API
+	npm i dompurify
+	import DOMPurify from 'dompurify'
+
+	const safeDescription = DOMPurify.sanitize(product.description); // kiểm tra sự an toàn
+	return (
+  	 <div dangerouslySetInnerHTML={{ __html: safeDescription }} >);// dùng render dữ liệu HTML từ API
+

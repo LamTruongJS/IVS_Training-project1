@@ -16,7 +16,11 @@ function DetailUser(props) {
       setUser(response.workspaces);
     })();
   }, []);
-  return <div className="row p-4">{user["workspace_id"]}</div>;
+  return (
+    <div className="row p-4 text-light">
+      Đây là trang DetailUser{user["workspace_id"]}
+    </div>
+  );
 }
 
 export default DetailUser;

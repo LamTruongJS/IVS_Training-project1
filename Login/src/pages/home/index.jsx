@@ -30,15 +30,14 @@ function Home(props) {
     await setData(data);
   };
   return (
-    <div>
-      <AddUser onSubmit={handleAddData} />
+    <div className="home_page">
       <Switch>
-        <Route path={match.path}>
-          <UserList userList={userList} />
+        <Route path={match.url} exact>
+          <UserList userList={userList} onSubmit={handleAddData} />
         </Route>
-        {/* <Route path={`${match.path}/$match.params.id`} exact>
+        <Route path={`${match.url}/:id`}>
           <DetailUser />
-        </Route> */}
+        </Route>
       </Switch>
     </div>
   );
